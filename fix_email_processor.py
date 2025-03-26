@@ -1,5 +1,5 @@
 """
-Email processor module for fetching and processing trucking-related emails.
+Fixed version of the email processor that avoids name conflicts.
 """
 import imaplib
 import os
@@ -47,25 +47,10 @@ def is_trucking_related(body_text):
         print("No trucking-related keywords found in email")
         return False
 
-def process_emails(fields_to_extract=None):
-    """
-    Process unread emails and extract relevant information.
-    
-    Args:
-        fields_to_extract (list, optional): List of fields to extract from emails.
-                                           Defaults to standard fields if None.
-    
-    Returns:
-        list: Extracted data from emails.
-    """
+def process_emails():
+    """Process unread emails and extract relevant information."""
     try:
         print("Attempting to connect to email server...")
-        
-        # Default fields if none provided
-        if fields_to_extract is None:
-            fields_to_extract = ['shipment_id', 'origin', 'destination', 'pickup_date', 'delivery_date', 'carrier', 'status']
-        
-        print(f"Will extract the following fields: {', '.join(fields_to_extract)}")
         
         # Get OAuth2 credentials
         credentials = get_credentials()
@@ -242,7 +227,8 @@ def process_emails(fields_to_extract=None):
                     print(f"Skipping non-trucking email: {msg_subject}")
                     continue
                 
-                # Extract data using LLM with the provided fields
+                # Extract data using LLM
+                fields_to_extract = ['shipment_id', 'origin', 'destination', 'pickup_date', 'delivery_date', 'carrier', 'status']
                 extracted_info = extract_data_with_llm(body, fields_to_extract)
                 
                 if extracted_info:
@@ -295,4 +281,4 @@ if __name__ == "__main__":
     # Test the email processing
     extracted_data = process_emails()
     if extracted_data:
-        save_to_json(extracted_data)
+        save_to_json(extracted_data) 

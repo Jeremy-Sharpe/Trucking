@@ -18,15 +18,22 @@ def extract_data_with_llm(email_body, fields_to_extract):
         "For each piece of information, also provide the exact phrase or sentence from the email that contains this information. "
         "Format the output as a JSON object where each key (e.g., 'shipment_id', 'origin') has a sub-object with 'value' (the extracted information) "
         "and 'context' (the relevant phrase or sentence from the email).\n\n"
-        "If you cannot find the information, respond with 'N/A' for the value and the context should be empty. "
-        "You must respond with ONLY valid JSON, no other text. Do not include any other text or comments in your response. ONLY respond with valid JSON. Do not add any thing like json before the actual json response. "
-        f"Email:\n{email_body}"
+        "If you cannot find the information for a specific field, respond with 'N/A' for the value and the context should be empty. "
+        "You must respond with ONLY valid JSON, no other text. Do not include any other text or comments in your response. ONLY respond with valid JSON."
+        f"\n\nEmail:\n{email_body}"
     )
 
     try:
         # Generate content using Gemini model
         model = genai.GenerativeModel('gemini-2.0-flash')
-        response = model.generate_content(prompt)
+        response = model.generate_content(
+            prompt,
+            generation_config={
+                "temperature": 0.2,  # Lower temperature for more factual responses
+                "top_p": 0.8,
+                "response_mime_type": "application/json",  # Hint that we want JSON
+            }
+        )
         
         # Parse the response
         if response.text:
@@ -45,6 +52,11 @@ def extract_data_with_llm(email_body, fields_to_extract):
                 if all_na:
                     print("Skipping email - no valid data found")
                     return None
+                
+                # Ensure all requested fields exist in the response
+                for field in fields_to_extract:
+                    if field not in json_data:
+                        json_data[field] = {"value": "N/A", "context": ""}
                 
                 return json_data
                 

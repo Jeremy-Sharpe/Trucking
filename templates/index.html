@@ -208,6 +208,39 @@
                 overflow-x: auto;
             }
         }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .p-4 {
+            padding: 1rem;
+        }
+
+        .rounded {
+            border-radius: 0.375rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .bg-gray-100 {
+            background-color: #f3f4f6;
+        }
+
+        .bg-green-100 {
+            background-color: #d1fae5;
+        }
+
+        .bg-red-100 {
+            background-color: #fee2e2;
+        }
+
+        #statusMessage {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -231,6 +264,9 @@
                 </div>
             </div>
             <button class="btn-primary" onclick="updateFields()">Update and Process Emails</button>
+            <div id="processingStatus" class="mt-4 p-4 rounded hidden">
+                <p id="statusMessage"></p>
+            </div>
         </div>
 
         <div class="card">
@@ -253,9 +289,13 @@
                     <tr>
                         {% for field in fields %}
                         <td>
-                            {% if item[field] %}
+                            {% if field in item and item[field] and item[field]['value'] != 'N/A' %}
                             <div class="value-text">{{ item[field]['value'] }}</div>
+                            {% if item[field]['context'] %}
                             <div class="context-text">{{ item[field]['context'] }}</div>
+                            {% endif %}
+                            {% else %}
+                            <div class="value-text text-gray-400">N/A</div>
                             {% endif %}
                         </td>
                         {% endfor %}
@@ -293,16 +333,59 @@
 
         function updateFields() {
             const fields = Array.from(document.querySelectorAll('#fields-container input')).map(input => input.value);
+            
+            const button = document.querySelector('button.btn-primary');
+            button.disabled = true;
+            button.textContent = 'Updating and Processing...';
+            
+            const statusDiv = document.getElementById('processingStatus');
+            statusDiv.classList.remove('hidden');
+            statusDiv.classList.add('bg-gray-100');
+            statusDiv.classList.remove('bg-red-100', 'bg-green-100');
+            document.getElementById('statusMessage').textContent = 'Updating fields...';
+            
             fetch('/update_fields', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ fields: fields }),
-            }).then(response => {
-                if (response.ok) {
-                    window.location.reload();
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to update fields');
                 }
+                
+                document.getElementById('statusMessage').textContent = 'Processing emails...';
+                
+                return fetch('/process_emails', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+            })
+            .then(response => response.json())
+            .then(data => {
+                statusDiv.classList.remove('bg-gray-100');
+                statusDiv.classList.add('bg-green-100');
+                
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                
+                document.getElementById('statusMessage').textContent = data.message;
+                
+                setTimeout(() => window.location.reload(), 2000);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                statusDiv.classList.remove('bg-gray-100');
+                statusDiv.classList.add('bg-red-100');
+                document.getElementById('statusMessage').textContent = 'Error: ' + error.message;
+                
+                button.disabled = false;
+                button.textContent = 'Update and Process Emails';
             });
         }
     </script>

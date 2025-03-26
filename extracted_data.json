@@ -1,0 +1,602 @@
+[
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "pickup_date": {
+      "value": "April 10, 2025",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "delivery_date": {
+      "value": "April 15, 2025",
+      "context": "Seattle, WA, on April 15, 2025"
+    },
+    "carrier": {
+      "value": "Northwest Freight Co.",
+      "context": "transported by our carrier, Northwest Freight Co."
+    },
+    "status": {
+      "value": "N/A",
+      "context": ""
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "pickup_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "delivery_date": {
+      "value": "April 2, 2025",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "carrier": {
+      "value": "Southwest Haulers",
+      "context": "This will be handled by our trusted carrier, Southwest Haulers."
+    },
+    "status": {
+      "value": "leaving",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "pickup_date": {
+      "value": "April 10, 2025",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "delivery_date": {
+      "value": "April 15, 2025",
+      "context": "Seattle, WA, on April 15, 2025"
+    },
+    "carrier": {
+      "value": "Northwest Freight Co.",
+      "context": "transported by our carrier, Northwest Freight Co."
+    },
+    "status": {
+      "value": "N/A",
+      "context": ""
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "pickup_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "delivery_date": {
+      "value": "April 2, 2025",
+      "context": "by April 2, 2025."
+    },
+    "carrier": {
+      "value": "Southwest Haulers",
+      "context": "This will be handled by our trusted carrier, Southwest Haulers."
+    },
+    "status": {
+      "value": "N/A",
+      "context": ""
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "pickup_date": {
+      "value": "April 10, 2025",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "delivery_date": {
+      "value": "April 15, 2025",
+      "context": "Seattle, WA, on April 15, 2025"
+    },
+    "carrier": {
+      "value": "Northwest Freight Co.",
+      "context": "transported by our carrier, Northwest Freight Co."
+    },
+    "status": {
+      "value": "N/A",
+      "context": ""
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "pickup_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "delivery_date": {
+      "value": "April 2, 2025",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "carrier": {
+      "value": "Southwest Haulers",
+      "context": "This will be handled by our trusted carrier, Southwest Haulers."
+    },
+    "status": {
+      "value": "N/A",
+      "context": ""
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "is scheduled to depart from Dallas, TX on April 10, 2025."
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "It will arrive at its destination, Seattle, WA, on April 15, 2025."
+    },
+    "departure_date": {
+      "value": "April 10, 2025",
+      "context": "is scheduled to depart from Dallas, TX on April 10, 2025."
+    },
+    "arrival_date": {
+      "value": "April 15, 2025",
+      "context": "It will arrive at its destination, Seattle, WA, on April 15, 2025."
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "departure_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "arrival_date": {
+      "value": "April 2, 2025",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "weight": {
+      "value": "10,500 pounds",
+      "context": "The load consists of 8 pallets weighing 10,500 pounds in total."
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "departure_date": {
+      "value": "April 10, 2025",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "arrival_date": {
+      "value": "April 15, 2025",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "weight": {
+      "value": "15,000 lbs",
+      "context": "total weight of 15,000 lbs"
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "departure_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "arrival_date": {
+      "value": "April 2, 2025",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "weight": {
+      "value": "10,500 pounds",
+      "context": "The load consists of 8 pallets weighing 10,500 pounds in total."
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "departure_date": {
+      "value": "April 10, 2025",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "arrival_date": {
+      "value": "April 15, 2025",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "weight": {
+      "value": "15,000 lbs",
+      "context": "total weight of 15,000 lbs"
+    },
+    "pallet_num": {
+      "value": "12",
+      "context": "shipment includes 12 pallets"
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "departure_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "arrival_date": {
+      "value": "April 2, 2025",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "weight": {
+      "value": "10,500 pounds",
+      "context": "weighing 10,500 pounds in total"
+    },
+    "pallet_num": {
+      "value": "8",
+      "context": "The load consists of 8 pallets"
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "departure_date": {
+      "value": "April 10, 2025",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "arrival_date": {
+      "value": "April 15, 2025",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "weight": {
+      "value": "15,000 lbs",
+      "context": "total weight of 15,000 lbs"
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "departure_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "arrival_date": {
+      "value": "April 2, 2025",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "weight": {
+      "value": "10,500 pounds",
+      "context": "The load consists of 8 pallets weighing 10,500 pounds in total."
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "weight": {
+      "value": "15,000 lbs",
+      "context": "total weight of 15,000 lbs"
+    },
+    "pallet_num": {
+      "value": "12",
+      "context": "shipment includes 12 pallets"
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "weight": {
+      "value": "10,500 pounds",
+      "context": "The load consists of 8 pallets weighing 10,500 pounds in total."
+    },
+    "pallet_num": {
+      "value": "8",
+      "context": "The load consists of 8 pallets weighing 10,500 pounds in total."
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "is scheduled to depart from Dallas, TX on April 10, 2025."
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "It will arrive at its destination, Seattle, WA, on April 15, 2025."
+    },
+    "departure_date": {
+      "value": "April 10, 2025",
+      "context": "is scheduled to depart from Dallas, TX on April 10, 2025."
+    },
+    "arrival_date": {
+      "value": "April 15, 2025",
+      "context": "It will arrive at its destination, Seattle, WA, on April 15, 2025."
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "departure_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "arrival_date": {
+      "value": "April 2, 2025",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "SH98765",
+      "context": "Shipment ID SH98765"
+    },
+    "origin": {
+      "value": "Dallas, TX",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "destination": {
+      "value": "Seattle, WA",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "departure_date": {
+      "value": "April 10, 2025",
+      "context": "depart from Dallas, TX on April 10, 2025"
+    },
+    "arrival_date": {
+      "value": "April 15, 2025",
+      "context": "arrive at its destination, Seattle, WA, on April 15, 2025"
+    },
+    "pallet_num": {
+      "value": "12",
+      "context": "The shipment includes 12 pallets"
+    },
+    "weight": {
+      "value": "15,000 lbs",
+      "context": "with a total weight of 15,000 lbs"
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 10:10:45 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  },
+  {
+    "shipment_id": {
+      "value": "TRK-45092",
+      "context": "Here\u2019s the latest on shipment TRK-45092."
+    },
+    "origin": {
+      "value": "Atlanta, Georgia",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "destination": {
+      "value": "Phoenix, Arizona",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "departure_date": {
+      "value": "March 28, 2025",
+      "context": "It\u2019s leaving Atlanta, Georgia, on March 28, 2025"
+    },
+    "arrival_date": {
+      "value": "April 2, 2025",
+      "context": "and is expected to reach Phoenix, Arizona, by April 2, 2025."
+    },
+    "pallet_num": {
+      "value": "8",
+      "context": "The load consists of 8 pallets weighing 10,500 pounds in total."
+    },
+    "weight": {
+      "value": "10,500 pounds",
+      "context": "The load consists of 8 pallets weighing 10,500 pounds in total."
+    },
+    "email_subject": "",
+    "email_date": "Wed, 26 Mar 2025 11:06:01 +1100",
+    "email_from": "Jeremy Sharpe <jeremysharpe007@gmail.com>"
+  }
+]
