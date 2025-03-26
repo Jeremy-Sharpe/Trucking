@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Email Processor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-color: #1f2937;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .card {
+            background: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        p {
+            margin-bottom: 2rem;
+            color: #6b7280;
+        }
+
+        .google-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .google-btn:hover {
+            background-color: #f8fafc;
+            border-color: #d1d5db;
+        }
+
+        .google-btn img {
+            width: 18px;
+            height: 18px;
+            margin-right: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Email Processor</h1>
+            <p>Please sign in with your Google account to access the email processor.</p>
+            <a href="{{ url_for('auth.login') }}" class="google-btn">
+                <img src="https://www.google.com/favicon.ico" alt="Google">
+                Sign in with Google
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

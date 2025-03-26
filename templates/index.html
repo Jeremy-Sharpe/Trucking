@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Processor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --success-color: #059669;
+            --danger-color: #dc2626;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-color: #1f2937;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .card {
+            background: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .field-list {
+            margin-bottom: 1.5rem;
+        }
+
+        .field-list h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .field-item {
+            display: flex;
+            align-items: center;
+            margin: 0.75rem 0;
+            gap: 0.5rem;
+        }
+
+        input[type="text"] {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.875rem;
+            width: 100%;
+            max-width: 300px;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-danger {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            opacity: 0.9;
+        }
+
+        .btn-success {
+            background-color: var(--success-color);
+            color: white;
+        }
+
+        .btn-success:hover {
+            opacity: 0.9;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-buttons a {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            background-color: var(--primary-color);
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .download-buttons a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: var(--card-background);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .value-text {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .context-text {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .field-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Processor Dashboard</h1>
+        
+        <div class="card">
+            <div class="field-list">
+                <h3>Fields to Extract</h3>
+                <div id="fields-container">
+                    {% for field in fields %}
+                    <div class="field-item">
+                        <input type="text" value="{{ field }}" readonly>
+                        <button class="btn-danger" onclick="removeField(this)">Remove</button>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="field-item">
+                    <input type="text" id="new-field" placeholder="Enter new field name">
+                    <button class="btn-success" onclick="addField()">Add Field</button>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="updateFields()">Update and Process Emails</button>
+        </div>
+
+        <div class="card">
+            <div class="download-buttons">
+                <a href="{{ url_for('download_json') }}">Download JSON</a>
+                <a href="{{ url_for('download_csv') }}">Download CSV</a>
+            </div>
+
+            {% if data %}
+            <table>
+                <thead>
+                    <tr>
+                        {% for field in fields %}
+                        <th>{{ field }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        {% for field in fields %}
+                        <td>
+                            {% if item[field] %}
+                            <div class="value-text">{{ item[field]['value'] }}</div>
+                            <div class="context-text">{{ item[field]['context'] }}</div>
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="empty-state">
+                <p>No data available. Add fields and process emails to see results.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        function addField() {
+            const newField = document.getElementById('new-field').value.trim();
+            if (newField) {
+                const container = document.getElementById('fields-container');
+                const div = document.createElement('div');
+                div.className = 'field-item';
+                div.innerHTML = `
+                    <input type="text" value="${newField}" readonly>
+                    <button class="btn-danger" onclick="removeField(this)">Remove</button>
+                `;
+                container.appendChild(div);
+                document.getElementById('new-field').value = '';
+            }
+        }
+
+        function removeField(button) {
+            button.parentElement.remove();
+        }
+
+        function updateFields() {
+            const fields = Array.from(document.querySelectorAll('#fields-container input')).map(input => input.value);
+            fetch('/update_fields', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ fields: fields }),
+            }).then(response => {
+                if (response.ok) {
+                    window.location.reload();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
